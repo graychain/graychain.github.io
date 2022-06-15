@@ -1,6 +1,6 @@
 ## Urbit Virtual Machine
 
-Urbit's EVM blockchain
+Urbit's EVM
 
 ```
   Chain Id:
