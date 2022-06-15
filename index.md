@@ -1,6 +1,6 @@
 ## Urbit Virtual Machine
 
-Urbit's EVM
+Urbit's EVM Blockchain
 
 ```
   Chain Id:
@@ -9,4 +9,5 @@ Urbit's EVM
 ```
 
 #### Roadmap
-- Migrate network to EVM client written in Hoon
+- Compose and adopt Hoon native EVM client
+- Migrate to PoS validation on the Urbit network
