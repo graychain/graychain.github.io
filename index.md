@@ -3,9 +3,9 @@
 Urbit's EVM Blockchain
 
 ```
-  Chain Id:
-  RPC Url:
-  Block Explorer Url:
+  Chain Id: 72
+  RPC Url: https://rpc.uvm.network
+  Block Explorer Url: 
 ```
 
 #### Roadmap
