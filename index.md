@@ -1,4 +1,12 @@
 ## Urbit Virtual Machine
 
+Urbit's EVM blockchain
+
+```
+  Chain Id:
+  RPC Url:
+  Block Explorer Url:
+```
+
 #### Roadmap
-- Compose and migrate network to EVM client written in Hoon and distributed on Urbit
+- Migrate network to EVM client written in Hoon
