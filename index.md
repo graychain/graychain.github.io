@@ -3,7 +3,7 @@
 Urbit's EVM Blockchain
 
 ```
-  Chain Id: 72
+  Chain Id: 444
   RPC Url: https://rpc.uvm.network
   Block Explorer Url: 
 ```
