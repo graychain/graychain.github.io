@@ -18,6 +18,15 @@ a:hover {
     opacity: .66;
 }
 
+br.responsive {
+  display: inline;
+}
+
+@media (min-width: 451px) { 
+  br.responsive {
+    display: none;
+  }
+}
 </style>
 <head>
     <meta charset="UTF-8">
@@ -45,7 +54,7 @@ a:hover {
 <code><b>Chain Id:</b> 444
 <b>Currency Symbol:</b> URBT
 <b>RPC Url:</b> https://rpc.uvm.network
-<b>Block Explorer Url:</b> https://explorer.uvm.network</code></pre></div></div>
+<b>Block Explorer Url:</b><br class="responsive"/> https://explorer.uvm.network</code></pre></div></div>
     <a style="max-width:20em;
     align-items: center;
     appearance: button;
