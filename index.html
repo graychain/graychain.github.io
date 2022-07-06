@@ -27,7 +27,65 @@ br.responsive {
     display: none;
   }
 }
+
+/* Accordian/FAQ */
+.accordion {
+  background-color: rgb(243 242 240);
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: rgb(243 242 240);
+}
+
+.accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  transition: max-height 0.2s ease-out;
+  max-width: 620px;
+}
+
+/* other components */
+.list-headers {
+    margin-bottom: 6px;
+    font-weight: 700px;
+    font-size: 20px;
+}
+
+.list-items {
+    margin-top: 12px;
+    list-style-type: none;
+}
+
+/* faq */
+.question {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
 </style>
+
+
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -38,6 +96,7 @@ br.responsive {
     <meta name="msapplication-config" content="assets/browserconfig.xml" />
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#ffffff">
+    <title>Urbit Virtual Machine</title>
 </head>
 <body>
     <h1 id="urbit-virtual-machine" style="margin-bottom: 10px;">Urbit Virtual Machine</h1>
@@ -47,8 +106,8 @@ br.responsive {
     font-size: 1.2rem;
     margin-top: 0px;">Urbit’s EVM Blockchain</p>
 
-    <div class="language-plaintext highlighter-rouge" style="margin-bottom: 20px; "><div class="highlight"><pre class="highlight" style="background-color: lightgray;
-        max-width: 30em;
+    <div class="language-plaintext highlighter-rouge" style="margin-bottom: 20px; "><div class="highlight"><pre class="highlight" style="background-color: rgb(243 242 240);
+        max-width: 450px;
         border-radius: 16px;
         padding: 10px;">
 <code><b>Chain Id:</b> 444
@@ -107,44 +166,97 @@ br.responsive {
     " onclick="addNetwork()" title="" class="" role="button"> <div style="margin-right: 1em;">Add to Metamask</div> <svg version="1.1" id="Layer_1" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 318.6 318.6" style="transform: translateX(1px); cursor: pointer; width: 22px; enable-background:new 0 0 318.6 318.6;" xml:space="preserve"> <style type="text/css"> .st0{fill:#E2761B;stroke:#E2761B;stroke-linecap:round;stroke-linejoin:round;} .st1{fill:#E4761B;stroke:#E4761B;stroke-linecap:round;stroke-linejoin:round;} .st2{fill:#D7C1B3;stroke:#D7C1B3;stroke-linecap:round;stroke-linejoin:round;} .st3{fill:#233447;stroke:#233447;stroke-linecap:round;stroke-linejoin:round;} .st4{fill:#CD6116;stroke:#CD6116;stroke-linecap:round;stroke-linejoin:round;} .st5{fill:#E4751F;stroke:#E4751F;stroke-linecap:round;stroke-linejoin:round;} .st6{fill:#F6851B;stroke:#F6851B;stroke-linecap:round;stroke-linejoin:round;} .st7{fill:#C0AD9E;stroke:#C0AD9E;stroke-linecap:round;stroke-linejoin:round;} .st8{fill:#161616;stroke:#161616;stroke-linecap:round;stroke-linejoin:round;} .st9{fill:#763D16;stroke:#763D16;stroke-linecap:round;stroke-linejoin:round;} </style> <polygon class="st0" points="274.1,35.5 174.6,109.4 193,65.8 "></polygon> <g> <polygon class="st1" points="44.4,35.5 143.1,110.1 125.6,65.8 	"></polygon> <polygon class="st1" points="238.3,206.8 211.8,247.4 268.5,263 284.8,207.7 	"></polygon> <polygon class="st1" points="33.9,207.7 50.1,263 106.8,247.4 80.3,206.8 	"></polygon> <polygon class="st1" points="103.6,138.2 87.8,162.1 144.1,164.6 142.1,104.1 	"></polygon> <polygon class="st1" points="214.9,138.2 175.9,103.4 174.6,164.6 230.8,162.1 	"></polygon> <polygon class="st1" points="106.8,247.4 140.6,230.9 111.4,208.1 	"></polygon> <polygon class="st1" points="177.9,230.9 211.8,247.4 207.1,208.1 	"></polygon> </g> <g> <polygon class="st2" points="211.8,247.4 177.9,230.9 180.6,253 180.3,262.3 	"></polygon> <polygon class="st2" points="106.8,247.4 138.3,262.3 138.1,253 140.6,230.9 	"></polygon> </g> <polygon class="st3" points="138.8,193.5 110.6,185.2 130.5,176.1 "></polygon> <polygon class="st3" points="179.7,193.5 188,176.1 208,185.2 "></polygon> <g> <polygon class="st4" points="106.8,247.4 111.6,206.8 80.3,207.7 	"></polygon> <polygon class="st4" points="207,206.8 211.8,247.4 238.3,207.7 	"></polygon> <polygon class="st4" points="230.8,162.1 174.6,164.6 179.8,193.5 188.1,176.1 208.1,185.2 	"></polygon> <polygon class="st4" points="110.6,185.2 130.6,176.1 138.8,193.5 144.1,164.6 87.8,162.1 	"></polygon> </g> <g> <polygon class="st5" points="87.8,162.1 111.4,208.1 110.6,185.2 	"></polygon> <polygon class="st5" points="208.1,185.2 207.1,208.1 230.8,162.1 	"></polygon> <polygon class="st5" points="144.1,164.6 138.8,193.5 145.4,227.6 146.9,182.7 	"></polygon> <polygon class="st5" points="174.6,164.6 171.9,182.6 173.1,227.6 179.8,193.5 	"></polygon> </g> <polygon class="st6" points="179.8,193.5 173.1,227.6 177.9,230.9 207.1,208.1 208.1,185.2 "></polygon> <polygon class="st6" points="110.6,185.2 111.4,208.1 140.6,230.9 145.4,227.6 138.8,193.5 "></polygon> <polygon class="st7" points="180.3,262.3 180.6,253 178.1,250.8 140.4,250.8 138.1,253 138.3,262.3 106.8,247.4 117.8,256.4 140.1,271.9 178.4,271.9 200.8,256.4 211.8,247.4 "></polygon> <polygon class="st8" points="177.9,230.9 173.1,227.6 145.4,227.6 140.6,230.9 138.1,253 140.4,250.8 178.1,250.8 180.6,253 "></polygon> <g> <polygon class="st9" points="278.3,114.2 286.8,73.4 274.1,35.5 177.9,106.9 214.9,138.2 267.2,153.5 278.8,140 273.8,136.4 281.8,129.1 275.6,124.3 283.6,118.2 	"></polygon> <polygon class="st9" points="31.8,73.4 40.3,114.2 34.9,118.2 42.9,124.3 36.8,129.1 44.8,136.4 39.8,140 51.3,153.5 103.6,138.2 140.6,106.9 44.4,35.5 	"></polygon> </g> <polygon class="st6" points="267.2,153.5 214.9,138.2 230.8,162.1 207.1,208.1 238.3,207.7 284.8,207.7 "></polygon> <polygon class="st6" points="103.6,138.2 51.3,153.5 33.9,207.7 80.3,207.7 111.4,208.1 87.8,162.1 "></polygon> <polygon class="st6" points="174.6,164.6 177.9,106.9 193.1,65.8 125.6,65.8 140.6,106.9 144.1,164.6 145.3,182.8 145.4,227.6 173.1,227.6 173.3,182.8 "></polygon> </svg>
     </a>
 
-    <h4 id="roadmap">Roadmap</h4>
+    <a style="
+    color: #232323;
+    margin-top: 16px !important;
+    border: #232323;
+    max-width:20em;
+    align-items: center;
+    appearance: button;
+    /* background-color: rgb(36, 34, 30); */
+    background-image: none;
+    /* border-bottom-color: rgb(255, 255, 255); */
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    border-bottom-style: solid;
+    /* border-bottom-width: 0px; */
+    border-image-outset: 0;
+    border-image-repeat: stretch;
+    border-image-slice: 100%;
+    border-image-source: none;
+    border-image-width: 1;
+    /* border-left-color: rgb(255, 255, 255); */
+    border-left-style: solid;
+    /* border-left-width: 0px; */
+    /* border-right-color: rgb(255, 255, 255); */
+    border-right-style: solid;
+    /* border-right-width: 0px; */
+    /* border-top-color: rgb(255, 255, 255); */
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border-top-style: solid;
+    /* border-top-width: 0px; */
+    box-sizing: border-box;
+    /* color: rgb(255, 255, 255); */
+    cursor: pointer;
+    display: flex;
+    flex-basis: 50%;
+    font-family: Inter, -apple-system, sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    height: 56px;
+    justify-content: center;
+    line-height: 27px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    /* opacity: 0.66; */
+    padding-bottom: 4px;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 4px;
+    tab-size: 4;
+    text-transform: none;
+    text-decoration: none;
+    " href="https://explorer.uvm.network" title="" class="" role="button"> <div style="margin-right: 1em;">Network Explorer</div>
+        <img alt="Emojione BW 1F310.svg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Emojione_BW_1F310.svg/48px-Emojione_BW_1F310.svg.png" decoding="async" width="22" height="22" class="thumbborder" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Emojione_BW_1F310.svg/72px-Emojione_BW_1F310.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Emojione_BW_1F310.svg/96px-Emojione_BW_1F310.svg.png 2x" data-file-width="512" data-file-height="512"> 
+    </a>
+
+    <h4 id="roadmap" class="list-headers">Roadmap</h4>
     <ul>
-        <li>Compose and adopt Hoon native EVM client</li>
-        <li>Migrate to PoS validation on the Urbit network</li>
-        <li>Automatically deposit gas funds to newly booted Urbit L1 ships</li>
+        <li class="list-items">Compose and adopt Hoon native EVM client</li>
+        <li class="list-items">Migrate to PoS validation on the Urbit network</li>
+        <li class="list-items">Automatically deposit gas funds for newly booted Urbit L1 ships</li>
     </ul>
-    <h4 id="vision">Vision</h4>
+    <h4 id="vision" class="list-headers">Vision</h4>
     <ul>
-        <li>A proof of stake network with a consensus layer running entirely on Urbit</li>
-        <li>Four click validator application installation</li>
-        <li></li>
+        <li class="list-items">A proof of stake network with a consensus layer running entirely on Urbit</li>
+        <li class="list-items">Four click validator application installation</li>
+    </ul>
+    <h4 id="vision" class="list-headers">News & Discussion</h4>
+    <ul>
+        <li class="list-items">Urbit Group: <a style="color:black;" href="web+urbitgraph://group/~bindel-batdul/urbit-virtual-machine">~bindel-batdul/urbit-virtual-machine</a></button>
+        <li class="list-items">Twitter: <a style="color:black;" href="https://twitter.com/uvm_network">uvm_network</a></li>
     </ul>
     
-    <a href="web+urbitgraph://group/~bindel-batdul/urbit-virtual-machine">~bindel-batdul/urbit-virtual-machine</a>
-    <a href="https://twitter.com/uvm_network">@uvm_network</a>
-    <a href="https://explorer.uvm.network">Network Explorer</a>
-    
-    <h4 id="faq">FAQ</h4>
-    <dl>
-        <dt>Did I receive $URBT?</dt>
+    <button class="accordion" style="border-radius: 12px; margin-top: 10px; max-width: 470px;"><b>FAQ</b></button>
+    <div class="panel" style="display: none; margin-top: 28px;">
+        <dt class="question"><strong>Did I receive $URBT?</strong></dt>
         <dd>If you booted an Urbit ship before June 20th, 2022, your ownership address in <a href="https://bridge.urbit.org/">bridge</a> received a share of the network.</dd>
         <dd>Your management address also received a small amount of URBT.</bb>
         
-        <dt>What is the EVM?</dt>
+        <dt class="question"><strong>What is the EVM?</strong></dt>
         <dd>EVM stands for Ethereum Virtual Machine, a state machine protocol that powers most smart contract platforms.</dd>
         <dd>Ethereum, Avalanche, Polygon, Binance Smart Chain, Fantom, Tron, Optimism, & Arbitrum all run on the EVM.</dd>
-        <dd>The EVM has been hardened by billions .</dd>
         
-        <dt>Why UVM?</dt>
-        <dd>To enhance the developer canvas of the Urbit stack by bringing </dd>
+        <dt class="question"><strong>Why UVM?</strong></dt>
+        <dd>To enhance the developer canvas by exposing the EVM to the Urbit stack.</dd>
         
-        <dt>What can I do with the UVM?</dt>
+        <dt class="question"><strong>What can I do with the UVM?</strong></dt>
         <dd>You can launch a DAO, a DEX, an NFT collection, a meme coin, something original, or just shitpost.</dd>
-        
-<!--         <dt>What's the goal of the UVM?</dt>
-        <dd>To bring </dd> -->
-     
     </dl>
+    </div>
 
     <script>
         const addNetwork = () => {
@@ -156,6 +268,7 @@ br.responsive {
                     symbol: 'URBT',
                     decimals: 18
                 },
+                iconUrls: ['https://gateway.pinata.cloud/ipfs/QmegbTzkwqTTnxZgZctuErsPbXM8fANQih6BNFKV1ChHeW'],
                 rpcUrls: ['https://rpc.uvm.network'],
                 blockExplorerUrls: ['https://explorer.uvm.network']
             }]
@@ -163,6 +276,21 @@ br.responsive {
             window.ethereum.request({ method: 'wallet_addEthereumChain', params })
                 .then(() => console.log('Success'))
                 .catch((error) => console.log("Error", error.message))
+        }
+
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+            panel.style.display = "none";
+            } else {
+            panel.style.display = "block";
+            }
+        });
         }
     </script>
 </body>
